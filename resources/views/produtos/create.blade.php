@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastrar um novo produto</title>
-</head>
-<body style="display: flex; align-items:center; justify-content:center; height:70vh;">
-        <form style="display: flex; flex-direction: column; width: 20vw;" action="{{ route('registrar_produto') }}" method="POST">
+@extends('layouts.main')
+
+@section('title', 'Produto novo')
+
+@section('content')
+      <div class="form-create">
+        <h1> Cadastro</h1>
+        <form style="display: flex; flex-direction: column; width: 20vw;" action="{{ route('registrar_produto') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            <label for="">Arquivo de imagem </label>
+            <input class="form-control" type="file" name="image" id="image" >
             <label for="">Nome</label>
-            <input type="text" name="nome">
+            <input class="form-control" type="text" name="nome">
             <label for="">Custo</label>
-            <input type="text" name="custo">
+            <input class="form-control" type="text" name="custo">
             <label for="">Preço</label>
-            <input type="text" name="preco">
+            <input class="form-control" type="text" name="preco">
             <label for="">Quantidade</label>
-            <input type="text" name="quantidade">
-            <button>Salvar</button>
+            <input class="form-control" type="text" name="quantidade">
+            <button class="form-control" >Salvar</button>
         </form>
-</body>
-</html>
+
+      </div>
+@endsection

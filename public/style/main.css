@@ -1,0 +1,64 @@
+/* GENEREALS */
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.box-products{
+    display: flex;
+   padding: 4vw !important;
+   gap: 1em !important;
+   
+}
+
+.box-product{
+    width: 10vw;
+    background-color: rgb(231, 231, 231);
+    border-radius: 20px;
+}
+
+#show{
+    padding: 1em;
+}
+
+#box-name{
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1px 1em;
+    line-height: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+/* BOX - CREATE */
+.form-create{
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5em;
+}
+
+.form-create button{
+  margin-top: 5px;
+  transition: 1s;
+ width: 5vw;
+ align-self: center;
+}
+
+
+.form-create button:hover{
+    margin-top: 5px;
+    transform: scale(110%);
+    transition: 1s;
+   border: 1px solid green;
+   width: 7vw;
+  }
+
